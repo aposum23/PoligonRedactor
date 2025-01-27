@@ -6,14 +6,23 @@ class RedactorHeader extends HTMLElement {
         );
     }
 
+    createNewPoligons() {
+        const event = new CustomEvent('create-poligons');
+        this.dispatchEvent(event);
+    }
+
     connectedCallback() {
         this.render();
+
+        this.shadow.querySelector('.header__create').addEventListener('click',
+            () => this.createNewPoligons()
+        );
     }
 
     render() {
         this.shadow.innerHTML = `
             <div class="header">
-                <button>Создать</button>
+                <button class="header__create">Создать</button>
                 <div class="header__additional">
                     <button>Сохранить</button>
                     <button>Сбросить</button>
