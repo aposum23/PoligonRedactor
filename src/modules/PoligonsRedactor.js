@@ -1,6 +1,6 @@
-import './modules/PoligonsRedactor';
+import './components/RedactorHeader';
 
-class App extends HTMLElement {
+class PoligonsRedactor extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow(
@@ -15,7 +15,7 @@ class App extends HTMLElement {
     render() {
         this.shadow.innerHTML = `
             <div>
-                <poligons-redactor></poligons-redactor>
+                <redactor-header></redactor-header>
             </div>
             <style>
             </style>
@@ -23,4 +23,4 @@ class App extends HTMLElement {
     }
 }
 
-customElements.define('app-component', App);
+customElements.define('poligons-redactor', PoligonsRedactor);
