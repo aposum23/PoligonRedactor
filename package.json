@@ -1,0 +1,26 @@
+{
+  "name": "poligonredactor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "webpack serve",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/eslint-parser": "^7.26.5",
+    "@babel/preset-env": "^7.26.7",
+    "babel-loader": "^9.2.1",
+    "eslint-webpack-plugin": "^4.2.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0"
+  }
+}
