@@ -1,5 +1,6 @@
 import './components/RedactorHeader';
 import './components/NewPoligons';
+import './components/PolygonsPlacement';
 import { generateRandomPolygons } from './utils/polygonsGeneration';
 
 class PoligonsRedactor extends HTMLElement {
@@ -31,6 +32,7 @@ class PoligonsRedactor extends HTMLElement {
             <div class="poligons-redactor">
                 <redactor-header class="poligons-redactor__header"></redactor-header>
                 <new-poligons class="poligons-redactor__new-polygons"></new-poligons>
+                <polygons-placement class="poligons-redactor__polygons-placement"></polygons-placement>
             </div>
             <style>
                 .poligons-redactor {
