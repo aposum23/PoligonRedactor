@@ -11,11 +11,29 @@ class RedactorHeader extends HTMLElement {
         this.dispatchEvent(event);
     }
 
+    saveData() {
+        const saveEvent = new CustomEvent('save-polygons');
+        this.dispatchEvent(saveEvent);
+    }
+
+    resetData() {
+        const resetEvent = new CustomEvent('reset-polygons');
+        this.dispatchEvent(resetEvent);
+    }
+
     connectedCallback() {
         this.render();
 
         this.shadow.querySelector('.header__create').addEventListener('click',
             () => this.createNewPoligons()
+        );
+
+        this.shadow.querySelector('.header__additional__save').addEventListener('click',
+            () => this.saveData()
+        );
+
+        this.shadow.querySelector('.header__additional__reset').addEventListener('click',
+            () => this.resetData()
         );
     }
 
@@ -24,8 +42,8 @@ class RedactorHeader extends HTMLElement {
             <div class="header">
                 <button class="header__create">Создать</button>
                 <div class="header__additional">
-                    <button>Сохранить</button>
-                    <button>Сбросить</button>
+                    <button class="header__additional__save">Сохранить</button>
+                    <button class="header__additional__reset">Сбросить</button>
                 </div>
             </div>
             <style>

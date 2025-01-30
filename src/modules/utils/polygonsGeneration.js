@@ -14,10 +14,10 @@ export function generateRandomPolygons() {
             const angle = (j / numPoints) * Math.PI * 2;
             const x = Math.round(centerX + Math.cos(angle) * radius);
             const y = Math.round(centerY + Math.sin(angle) * radius);
-            points.push({ x, y });
+            points.push({x, y });
         }
 
-        polygons.push(points);
+        polygons.push({id: i, points});
     }
 
     return polygons;
